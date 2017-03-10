@@ -1,3 +1,5 @@
+package com.bolex.recitewords;
+
 import com.intellij.notification.*;
 
 /**

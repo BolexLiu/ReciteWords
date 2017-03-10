@@ -1,3 +1,7 @@
+package com.bolex.recitewords;
+
+import com.bolex.recitewords.Logger;
+import com.bolex.recitewords.RequestRunnable;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
@@ -5,7 +9,6 @@ import com.intellij.openapi.editor.CaretModel;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
-import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.util.TextRange;
 import org.apache.http.util.TextUtils;
 

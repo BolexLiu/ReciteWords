@@ -1,3 +1,6 @@
+package com.bolex.recitewords;
+
+import com.bolex.recitewords.Logger;
 import com.google.gson.Gson;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.editor.Editor;

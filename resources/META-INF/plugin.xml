@@ -30,7 +30,7 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="ReciteWords" class="ReciteWords" text="ReciteWords">
+    <action id="ReciteWords" class="com.bolex.recitewords.ReciteWords" text="ReciteWords">
       <add-to-group group-id="EditMenu" anchor="first"/>
       <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt Q"/>
     </action>

@@ -1,3 +1,5 @@
+package com.bolex.recitewords;
+
 import java.util.List;
 import java.util.Map;
 
