@@ -15,7 +15,7 @@
 - 选中代码，按下 Ctrl + Alt+Q(也可以自己设定)。即可翻译。效果如下:
 
 ![](./img/1.png)
-- 你所翻译的单词会被记录在用户目录下的ReciteWords.md文件中。可以通过Markdown编辑器打开它进行学习。效果如下:
+- 你所翻译的单词会被记录在你**当前用户目录**下的ReciteWords.md文件中（如:C:\Users\Bolex\ReciteWords.md）。可以通过Markdown编辑器打开它进行学习。效果如下:
 
   ![](./img/2.png)
 
