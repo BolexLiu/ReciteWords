@@ -8,7 +8,7 @@
 
 ##使用方法
 
-- Clone项目，获取ReciteWords.jar。或者：[点击下载](https://github.com/BolexLiu/ReciteWords)。
+- Clone项目，获取根目录下的ReciteWords.jar。
 
 - 打开Android Studio， Preferences -> Plugins -> Install plugin from disk -> 获取ReciteWords.jar安装并重启Android Studio。
 
