@@ -29,8 +29,9 @@
 - 0.2 修复因为在androidStudio2.3版本中禁止了包名为空所抛出的异常。 感谢简书钟子明同学的测试！
 
 
-## Q：
+## Q
 - MAC和Linux平台由于没有写入权限暂时不能保存MD文件。 如果有大大知道java写入权限的问题 发个issues或者pull requsts过来。
+
 ##Thanks
 - [有道翻译](http://fanyi.youdao.com/openapi?path=data-mode)
 - [ECTranslation](https://github.com/Skykai521/ECTranslation)
