@@ -24,7 +24,7 @@
 ### 使用键盘快捷键触发
 - Preferences -> Keymap -> 获取ReciteWords - > 右键 add Keyboard Shortcut. 输入你想要的快捷键即可。
 
-#版本
+# 版本
 - 0.1 发布第一个版本 包含 划词翻译 和历史翻译记录成md文件
 - 0.2 修复因为在androidStudio2.3版本中禁止了包名为空所抛出的异常。 感谢简书钟子明同学的测试！
 
@@ -32,7 +32,7 @@
 ## Q
 - MAC和Linux平台由于没有写入权限暂时不能保存MD文件。 如果有大大知道java写入权限的问题 发个issues或者pull requsts过来。
 
-##Thanks
+## Thanks
 - [有道翻译](http://fanyi.youdao.com/openapi?path=data-mode)
 - [ECTranslation](https://github.com/Skykai521/ECTranslation)
 - 该插件是基于ECTranslation扩展的。在原有的基础上添加单词保存的功能，方便后续将陌生单词记录下来学习。
