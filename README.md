@@ -2,11 +2,11 @@
 
  Android Studio 翻译插件,可以将英文翻译为中文并**记录到生词本**提供查阅。
 
-##功能
+## 功能
 - 划词翻译
 - 生词本保存翻译过后的历史记录
 
-##使用方法
+## 使用方法
 
 - Clone项目，获取根目录下的ReciteWords.jar。
 
@@ -19,7 +19,7 @@
 
   ![](./img/2.png)
 
-##修改快捷键
+## 修改快捷键
 
 ### 使用键盘快捷键触发
 - Preferences -> Keymap -> 获取ReciteWords - > 右键 add Keyboard Shortcut. 输入你想要的快捷键即可。
@@ -29,6 +29,8 @@
 - 0.2 修复因为在androidStudio2.3版本中禁止了包名为空所抛出的异常。 感谢简书钟子明同学的测试！
 
 
+## Q：
+- MAC和Linux平台由于没有写入权限暂时不能保存MD文件。 如果有大大知道java写入权限的问题 发个issues或者pull requsts过来。
 ##Thanks
 - [有道翻译](http://fanyi.youdao.com/openapi?path=data-mode)
 - [ECTranslation](https://github.com/Skykai521/ECTranslation)
