@@ -98,11 +98,15 @@ public class RequestRunnable implements Runnable {
      * @param translate 译文
      * @throws IOException
      */
-    private void saveWords( String Words,String translate) throws IOException {
+    private void saveWords( String Words,String translate)   {
+        try {
         String usrHome = System.getProperty("user.home");
         File file = new File(usrHome+"\\ReciteWords.md");// 要写入的文本文件
+        file.setExecutable(true);
+        file.setReadable(true);
+        file.setWritable(true);
         if (!file.exists()) {// 如果文件不存在，则创建该文件
-            file.createNewFile();
+                file.createNewFile();
             FileWriter writer = new FileWriter(file,true);// 获取该文件的输出流
             writer.write("# 这里是你该记住的单词。请用Markdown编辑器打开它。\r\n");
             writer.write("---\r\n\r\n");
@@ -116,6 +120,9 @@ public class RequestRunnable implements Runnable {
         writer.write("```\r\n");
         writer.flush();
         writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

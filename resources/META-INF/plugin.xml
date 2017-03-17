@@ -1,22 +1,23 @@
 <idea-plugin version="2">
   <id>com.bolex.recitewords</id>
   <name>ReciteWords</name>
-  <version>1.0</version>
+  <version>1.1</version>
   <vendor email="support@yourcompany.com" url="http://www.jianshu.com/u/abc8086489c7">YourCompany</vendor>
 
-  <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
-    ]]></description>
+  <description>
+    <![CDATA[
+<html>这是一个翻译+记单词的插件，目前只能在windows平台上记录。由于Linux和Mac平台插件没有权限写入,<br>
+您可以通过命令行的形式将目录权限提升至777,即可写可读一样也可以实现记录。
+<a href="https://github.com/BolexLiu/ReciteWords"> openSource</a>
+      </html>
+      ]]>
+  </description>
 
-  <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
-    ]]>
+  <change-notes>
   </change-notes>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="145.0"/>
+  <idea-version since-build="107.121"/>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
