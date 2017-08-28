@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>com.bolex.recitewords</id>
   <name>ReciteWords</name>
-  <version>1.1</version>
+  <version>1.2</version>
   <vendor email="support@yourcompany.com" url="http://www.jianshu.com/u/abc8086489c7">YourCompany</vendor>
 
   <description>

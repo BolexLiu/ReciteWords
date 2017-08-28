@@ -10,6 +10,7 @@ import com.intellij.openapi.editor.CaretModel;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.TextRange;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.impl.source.PsiJavaFileImpl;
@@ -31,6 +32,9 @@ public class ReciteWords extends AnAction {
     }
     private void getTranslation(AnActionEvent event) {
         Editor mEditor = event.getData(PlatformDataKeys.EDITOR);
+        Project project = event.getData(PlatformDataKeys.PROJECT);
+        String basePath = project.getBasePath();
+
         if (null == mEditor) {
             return;
         }
@@ -43,7 +47,7 @@ public class ReciteWords extends AnAction {
             }
         }
         String queryText = strip(addBlanks(selectedText));
-        new Thread(new RequestRunnable(mEditor, queryText)).start();
+        new Thread(new RequestRunnable(mEditor, queryText,basePath)).start();
     }
 
     public String getCurrentWords(Editor editor) {

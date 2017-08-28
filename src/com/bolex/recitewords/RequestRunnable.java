@@ -17,9 +17,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 import java.awt.*;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -45,10 +43,12 @@ public class RequestRunnable implements Runnable {
     private static final String KEY = "977124034";
     private Editor mEditor;
     private String mQuery;
+    private final String basePath;
 
-    public RequestRunnable(Editor editor, String query) {
+    public RequestRunnable(Editor editor, String query,String basePath) {
         this.mEditor = editor;
         this.mQuery = query;
+        this.basePath = basePath;
     }
 
     public void run() {
@@ -100,26 +100,32 @@ public class RequestRunnable implements Runnable {
      */
     private void saveWords( String Words,String translate)   {
         try {
-        String usrHome = System.getProperty("user.home");
-        File file = new File(usrHome+"\\ReciteWords.md");// 要写入的文本文件
+//        String usrHome = System.getProperty("user.home");
+//        File file = new File(usrHome+"\\ReciteWords.md");// 要写入的文本文件
+       File file = new File(basePath+"\\翻译历史记录.md");// 要写入的文本文件
         file.setExecutable(true);
         file.setReadable(true);
         file.setWritable(true);
         if (!file.exists()) {// 如果文件不存在，则创建该文件
-                file.createNewFile();
-            FileWriter writer = new FileWriter(file,true);// 获取该文件的输出流
-            writer.write("# 这里是你该记住的单词。请用Markdown编辑器打开它。\r\n");
+            file.createNewFile();
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(file,true),"UTF-8");
+//            FileWriter writer = new FileWriter(file,true);// 获取该文件的输出流
+            writer.write("# 翻译历史记录 \r\n");
+            writer.write("这里我们翻译过后的结果集，建议用Markdown编辑器打开它，下方是项目地址。欢迎PR或Issues，喜欢的话给个Star，交个朋友吧。\r\n");
+            writer.write("### [ReciteWords](https://github.com/BolexLiu/ReciteWords)\r\n\r\n");
+
+            writer.write("## History：\r\n\r\n");
             writer.write("---\r\n\r\n");
             writer.flush();// 清空缓冲区，立即将输出流里的内容写到文件里
             writer.close();// 关闭输出流，施放资源
         }
-        FileWriter writer = new FileWriter(file,true);
+        OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(file,true),"UTF-8");
         writer.write("- "+Words+"\r\n");
         writer.write("```\r\n");
         writer.write(translate);
         writer.write("```\r\n");
-        writer.flush();
-        writer.close();
+        writer.flush();// 清空缓冲区，立即将输出流里的内容写到文件里
+        writer.close();// 关闭输出流，施放资源
         } catch (IOException e) {
             e.printStackTrace();
         }
