@@ -15,8 +15,10 @@
 - 选中代码，按下 Ctrl + Alt+Q(也可以自己设定)。即可翻译。效果如下:
 
 ![](./img/1.png)
-- 你所翻译的单词会被记录在你**当前用户目录**下的ReciteWords.md文件中（如:C:\Users\Bolex\ReciteWords.md）。可以通过Markdown编辑器打开它进行学习。效果如下:
+- ~~你所翻译的单词会被记录在你**当前用户目录**下的ReciteWords.md文件中（如:C:\Users\Bolex\ReciteWords.md）。可以通过Markdown编辑器打开它进行学习。效果如下:~~
 
+
+- 1.2版本更新后，将改为跟随项目路径生成单词历史记录。as翻译后切换Project模式可以在项目文件夹中直接看到。
   ![](./img/2.png)
 
 ## 修改快捷键
@@ -29,9 +31,15 @@
 - 0.2 修复因为在androidStudio2.3版本中禁止了包名为空所抛出的异常。 感谢简书钟子明同学的测试！
 - 1.1 修复因为没有权限写入导致翻译时抛出权限不足的异常。
 
-## Q
-- MAC和Linux平台由于没有写入权限暂时不能保存MD文件。 如果有大大知道java写入权限的问题 发个issues或者pull requsts过来。
+- 1.2
+   修复mac/linux平台下无权访问路径的问题
+   替换用户目录保存历史为项目目录
+   修复乱码异常，强制UTF-8编码
+   
 
+
+## Q
+-  ~~MAC和Linux平台由于没有写入权限暂时不能保存MD文件。~~ 如果有大大知道java写入权限的问题 发个issues或者pull requsts过来。（已解决，见1.2提交日志。）
 ## Thanks
 - [有道翻译](http://fanyi.youdao.com/openapi?path=data-mode)
 - [ECTranslation](https://github.com/Skykai521/ECTranslation)
