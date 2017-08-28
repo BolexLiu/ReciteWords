@@ -102,7 +102,7 @@ public class RequestRunnable implements Runnable {
         try {
 //        String usrHome = System.getProperty("user.home");
 //        File file = new File(usrHome+"\\ReciteWords.md");// 要写入的文本文件
-       File file = new File(basePath+"\\翻译历史记录.md");// 要写入的文本文件
+       File file = new File(basePath+File.separator+"翻译历史记录.md");// 要写入的文本文件
         file.setExecutable(true);
         file.setReadable(true);
         file.setWritable(true);
