@@ -7,7 +7,7 @@
 - 生词本保存翻译过后的历史记录
 
 ## 支持使用
- idea AndroidStudio WebStorm
+ idea、AndroidStudio、WebStorm
 
 ## 环境
  Windows、Mac、Linux
