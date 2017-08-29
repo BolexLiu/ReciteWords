@@ -1,13 +1,13 @@
 # ReciteWords
 
- 是一个Android Studio 记单词翻译插件,可以将英文翻译为中文并**记录到生词本**提供查阅。
+ 是一个idea、AndroidStudio 记单词翻译插件,可以将英文翻译为中文并**记录到生词本**提供查阅。
 
 ## 功能
 - 划词翻译
 - 生词本保存翻译过后的历史记录
 
 ## 支持使用
- idea、AndroidStudio、WebStorm
+ idea、AndroidStudio
 
 ## 环境
  Windows、Mac、Linux
