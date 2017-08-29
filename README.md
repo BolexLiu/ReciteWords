@@ -6,6 +6,12 @@
 - 划词翻译
 - 生词本保存翻译过后的历史记录
 
+## 支持使用
+ idea AndroidStudio WebStorm
+
+## 环境
+ Windows、Mac、Linux
+
 ## 使用方法
 
 - Clone项目，获取根目录下的ReciteWords.jar。
@@ -40,6 +46,8 @@
 
 ## Q
 -  ~~MAC和Linux平台由于没有写入权限暂时不能保存MD文件。~~ 如果有大大知道java写入权限的问题 发个issues或者pull requsts过来。（已解决，见1.2提交日志。）
+
+
 ## Thanks
 - [有道翻译](http://fanyi.youdao.com/openapi?path=data-mode)
 - [ECTranslation](https://github.com/Skykai521/ECTranslation)
