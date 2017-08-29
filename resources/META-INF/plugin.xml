@@ -2,13 +2,14 @@
   <id>com.bolex.recitewords</id>
   <name>ReciteWords</name>
   <version>1.2</version>
-  <vendor email="support@yourcompany.com" url="http://www.jianshu.com/u/abc8086489c7">YourCompany</vendor>
+  <vendor email="support@yourcompany.com" url="https://github.com/BolexLiu/ReciteWords">YourCompany</vendor>
 
   <description>
     <![CDATA[
-<html>这是一个翻译+记单词的插件，目前只能在windows平台上记录。由于Linux和Mac平台插件没有权限写入,<br>
-您可以通过命令行的形式将目录权限提升至777,即可写可读一样也可以实现记录。
+<html>这是一个翻译+记单词的插件，支持Linux、Mac、windows平台上在idea和AndroidStudio上运行<br>
+翻译历史记录将在当前项目的根目录上生成markdown文档。
 <a href="https://github.com/BolexLiu/ReciteWords"> openSource</a>
+选中你要翻译的单词或代码。alt+Q呼出。
       </html>
       ]]>
   </description>
@@ -33,7 +34,7 @@
     <!-- Add your actions here -->
     <action id="ReciteWords" class="com.bolex.recitewords.ReciteWords" text="ReciteWords">
       <add-to-group group-id="EditMenu" anchor="first"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt Q"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt Q"/>
     </action>
   </actions>
 
