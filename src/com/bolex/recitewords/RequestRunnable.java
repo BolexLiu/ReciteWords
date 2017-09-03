@@ -69,7 +69,9 @@ public class RequestRunnable implements Runnable {
                 //show result
                 showPopupBalloon(translation.toString());
                 Logger.info(translation.toString());
-                saveWords(translation.getQuery(),translation.toString());
+                if (!MarkDownProcessing.isSave(basePath,translation.getQuery())){
+                    MarkDownProcessing. saveWords(translation.getQuery(),translation.toString(),basePath);
+                }
             } else {
                 showPopupBalloon(response.getStatusLine().getReasonPhrase());
             }
@@ -90,45 +92,6 @@ public class RequestRunnable implements Runnable {
                         .show(factory.guessBestPopupLocation(mEditor) , Balloon.Position.below);
             }
         });
-    }
-
-    /**
-     *  存单词
-     * @param Words 原文
-     * @param translate 译文
-     * @throws IOException
-     */
-    private void saveWords( String Words,String translate)   {
-        try {
-//        String usrHome = System.getProperty("user.home");
-//        File file = new File(usrHome+"\\ReciteWords.md");// 要写入的文本文件
-       File file = new File(basePath+File.separator+"翻译历史记录.md");// 要写入的文本文件
-        file.setExecutable(true);
-        file.setReadable(true);
-        file.setWritable(true);
-        if (!file.exists()) {// 如果文件不存在，则创建该文件
-            file.createNewFile();
-            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(file,true),"UTF-8");
-//            FileWriter writer = new FileWriter(file,true);// 获取该文件的输出流
-            writer.write("# 翻译历史记录 \r\n");
-            writer.write("这里我们翻译过后的结果集，建议用Markdown编辑器打开它，下方是项目地址。欢迎PR或Issues，喜欢的话给个Star，交个朋友吧。\r\n");
-            writer.write("### [ReciteWords](https://github.com/BolexLiu/ReciteWords)\r\n\r\n");
-
-            writer.write("## History：\r\n\r\n");
-            writer.write("---\r\n\r\n");
-            writer.flush();// 清空缓冲区，立即将输出流里的内容写到文件里
-            writer.close();// 关闭输出流，施放资源
-        }
-        OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(file,true),"UTF-8");
-        writer.write("- "+Words+"\r\n");
-        writer.write("```\r\n");
-        writer.write(translate);
-        writer.write("```\r\n");
-        writer.flush();// 清空缓冲区，立即将输出流里的内容写到文件里
-        writer.close();// 关闭输出流，施放资源
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
 
